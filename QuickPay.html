@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickPay - Fast, Secure Payments</title>
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font --><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Load Lucide icons --><script src="https://unpkg.com/lucide@0.363.0/dist/umd/lucide.min.js"></script>
+    <!-- Particles.js script removed -->
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        .hero-section {
+            position: relative;
+            overflow: hidden; /* Ensure content doesn't spill */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Moved background here */
+        }
+        /* Removed #particles-js styles */
+        .hero-content {
+            position: relative;
+            /* Removed z-index */
+        }
+
+        /* --- Keyframe Animation for Logo --- */
+        @keyframes electric-glow {
+          0%, 100% {
+            filter: drop-shadow(0 0 2px rgba(196, 181, 253, 0.4)); /* Lighter violet glow */
+          }
+          50% {
+            filter: drop-shadow(0 0 8px rgba(196, 181, 253, 0.8)); /* Brighter violet glow */
+          }
+        }
+        
+        /* Logo specific styles */
+        .quickpay-logo {
+            height: 32px; /* Adjust height as needed */
+            width: auto; /* Maintain aspect ratio */
+            animation: electric-glow 3s infinite ease-in-out; 
+        }
+        @media (min-width: 768px) {
+            .quickpay-logo {
+                height: 40px; /* Larger on desktop */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header --><header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-2xl font-bold text-indigo-600">
+                <img src="https://image.pollinations.ai/prompt/3D%20circular%20QuickPay%20logo%20with%20electric%20spark%20and%20gradient%20colors%20similar%20to%20PhonePe%20logo" alt="QuickPay 3D Circular Logo" class="quickpay-logo">
+            </div>
+            <!-- Navigation Links (Desktop) --><div class="hidden md:flex space-x-6 items-center">
+                <a href="#" class="text-gray-600 hover:text-indigo-600 font-medium">Personal</a>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 font-medium">Business</a>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 font-medium">Developer</a>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 font-medium">About Us</a>
+                <a href="#" class="bg-indigo-600 text-white px-4 py-2 rounded-full font-medium hover:bg-indigo-700 transition duration-300">
+                    Get Started
+                </a>
+            </div>
+            <!-- Mobile Menu Button --><div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu (Hidden by default) --><div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2">
+            <a href="#" class="block text-gray-600 hover:text-indigo-600 font-medium">Personal</a>
+            <a href="#" class="block text-gray-600 hover:text-indigo-600 font-medium">Business</a>
+            <a href="#" class="block text-gray-600 hover:text-indigo-600 font-medium">Developer</a>
+            <a href="#" class="block text-gray-600 hover:text-indigo-600 font-medium">About Us</a>
+            <a href="#" class="block bg-indigo-600 text-white text-center px-4 py-2 rounded-full font-medium hover:bg-indigo-700 transition duration-300">
+                Get Started
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section --><main>
+        <section class="hero-section text-white py-20 md:py-32">
+            <!-- Particles.js container removed -->
+
+            <div class="hero-content container mx-auto px-6 text-center">
+                <div class="flex flex-col items-center">
+                    <!-- Hero Text --><div class="mb-10 md:mb-0">
+                        <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                            The Future of Payments is Here.
+                        </h1>
+                        <p class="text-lg md:text-xl text-indigo-100 mb-8">
+                            Join millions who use QuickPay for fast, secure, and easy
+                            digital payments. Pay bills, send money, and shop online, all from one app.
+                        </p>
+                        <a href="#" class="bg-white text-indigo-600 font-bold px-8 py-3 rounded-full text-lg hover:bg-gray-100 transition duration-300">
+                            Download the App
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section --><section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+                    Everything You Need in One App
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 --><div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full p-3 w-12 h-12 mb-4">
+                            <i data-lucide="send" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Instant Transfers</h3>
+                        <p class="text-gray-600">
+                            Send and receive money instantly from anyone, anywhere.
+                        </p>
+                    </div>
+                    <!-- Feature 2 --><div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full p-3 w-12 h-12 mb-4">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Bank-Grade Security</h3>
+                        <p class="text-gray-600">
+                            Your data and transactions are protected with multi-layer security.
+                        </p>
+                    </div>
+                    <!-- Feature 3 --><div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full p-3 w-12 h-12 mb-4">
+                            <i data-lucide="receipt" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Bill Payments</h3>
+                        <p class="text-gray-600">
+                            Pay your utility bills, recharge your phone, and more, all in one place.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section --><section class="py-20 bg-indigo-50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                    Get Started with QuickPay Today
+                </h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Download the app and experience the future of digital payments.
+                </p>
+                <a href="#" class="bg-indigo-600 text-white font-bold px-8 py-3 rounded-full text-lg hover:bg-indigo-700 transition duration-300">
+                    Download Now
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer --><footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Logo & About --><div>
+                    <img src="https://image.pollinations.ai/prompt/3D%20circular%20QuickPay%20logo%20with%20electric%20spark%20and%20gradient%20colors%20similar%20to%20PhonePe%20logo" alt="QuickPay 3D Circular Logo" class="quickpay-logo mb-4">
+                    <p class="text-gray-400">
+                        Making payments simple, fast, and secure for everyone.
+                    </p>
+                </div>
+                <!-- Links 1 --><div>
+                    <h5 class="text-white font-semibold mb-4">Company</h5>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="hover:text-white">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-white">Careers</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-white">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Links 2 --><div>
+                    <h5 class="text-white font-semibold mb-4">Support</h5>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="hover:text-white">Help Center</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-white">FAQ</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <!-- Social Media --><div>
+                    <h5 class="text-white font-semibold mb-4">Follow Us</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-lucide="facebook" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" classs="text-gray-400 hover:text-white">
+                            <i data-lucide="twitter" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-lucide="instagram" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500">
+                &copy; 2025 QuickPay. All rights reserved. This is a fictional website.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Wait for the DOM to be fully loaded before running scripts
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            // Initialize Lucide icons
+            try {
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                } else {
+                    console.error("Lucide library not loaded.");
+                }
+            } catch (e) {
+                console.error("Error initializing Lucide icons on load:", e);
+            }
+
+            // Mobile menu toggle
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    // Toggle icon
+                    const icon = menuButton.querySelector('i');
+                    if (mobileMenu.classList.contains('hidden')) {
+                        icon.setAttribute('data-lucide', 'menu');
+                    } else {
+                        icon.setAttribute('data-lucide', 'x');
+                    }
+                    
+                    // Re-render icons after changing attributes
+                    try {
+                        if (typeof lucide !== 'undefined') {
+                            lucide.createIcons(); 
+                        }
+                    } catch (e) {
+                        console.error("Error re-rendering Lucide icon:", e);
+                    }
+                });
+            } else {
+                console.warn("Mobile menu elements not found.");
+            }
+
+            // Initialize Particles.js (block removed)
+            
+        });
+    </script>
+</body>
+</html>
+
